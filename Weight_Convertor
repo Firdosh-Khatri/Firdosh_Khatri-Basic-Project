@@ -1,0 +1,6 @@
+weight = int(input("Enter your weight "))
+unit = input('(L)bs or (K)g: ')
+if unit == "L" or "l":
+    print("Your weight is ", weight * 0.45, "kgs")
+elif:
+    print("Your weight is ", weight / 0.45, "Lbs")
