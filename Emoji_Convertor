@@ -1,0 +1,12 @@
+msg = input(">")
+word = msg.split(' ')
+emojis = {
+    ":)" : "😀",
+    ":(" : "😒",
+    "8-[": "😡",
+    "<3" : "❤️"
+}
+output = ""
+for i in word:
+   output += emojis.get(i, i) + " "
+print(output)
