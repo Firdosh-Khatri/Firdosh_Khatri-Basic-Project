@@ -1,0 +1,16 @@
+def emoji_convertor (message):
+    word = message.split(' ')
+    emojis = {
+        ":)": "😀",
+        ":(": "😒",
+        "8-[": "😡",
+        "<3": "❤️"
+    }
+    output = ""
+    for i in word:
+        output += emojis.get(i, i) + " "
+    return output
+
+
+message = input(">")
+print(emoji_convertor(message))
