@@ -1,0 +1,25 @@
+def factorial(number):
+    if number == 0 or number == 1:
+        return 1
+    else:
+        return number * factorial(number - 1)
+
+
+def factorialTrailingZeroes(number):
+    # Count the trailing zeroes directly without calculating the full factorial
+    count = 0
+    i = 5
+    while number // i != 0:
+        count += number // i
+        i *= 5  # Move to higher powers of 5 (5, 25, 125, etc.)
+    return count
+
+
+if __name__ == '__main__':
+    number = int(input("Enter a number: \n"))
+
+    # Calculate factorial (optional, since it's not required for trailing zeroes)
+    fac = factorial(number)
+
+    print(f'The factorial of {number} is {fac}')
+    print(f"Trailing zeroes in {number}! are {factorialTrailingZeroes(number)}")
