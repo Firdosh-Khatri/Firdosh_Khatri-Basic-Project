@@ -1,0 +1,16 @@
+#python program for grocery calculator
+
+total =  0
+q = False
+
+while True:
+    UserInput = input("Enter the item price or press q to quit: \n")
+    if UserInput!= 'q':
+     try:
+       total += int(UserInput)
+       print(f"Order summary so far is:{total}")
+     except ValueError:
+         print("Enter a valid number or enter 'q' to quit")
+    else:
+        print(f"Your Total bill is {total}. Thank you for visiting us")
+        break
